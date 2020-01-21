@@ -8,24 +8,17 @@
 </head>
 <body>
     <script>
-         function f ( a = 2, b = 3, c) {
-            if (typeof(c) === 'function') {
-            return c();   
-            } else {
-            return sum();
-            }
-        }
-
-        function sum (a = 2, b = 3) { 
-            return a + b;
-        }
-
-        function  division (a = 333, b = 10) {
-            return a / b;
-        }
-
-        var result = f(4, 5, division);
-        console.log(result);
+        var age = +prompt('Ваш возрaст?', 0);
+        var residue = age % 10;
+        var exception = age % 100;
+        
+        if (residue == 1 && exception !== 11) {
+            alert(age + ' год');
+        } else if (residue >= 2 && residue <= 4 && exception !== 12 && exception !== 13 && exception !== 14) {
+            alert(age + ' года');
+        } else if (residue <= 9) {
+            alert(age + ' лет');
+        }   
     </script>
 </body>
 </html>
